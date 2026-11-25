@@ -126,11 +126,21 @@ In this task, you will create a pipeline that ingests data from an external sour
 
    ![Screenshot of the pipeline canvas with the new Copy job activity](./Images/L2T1S14-1709.png)
 
-1. The copy job activity needs a connection before the pipeline can run. With the **Copy job (1)** activity selected on the canvas, open the **Settings (2)** tab in the pane below the canvas. Select the **Connection** dropdown **(3)** and then select **Browse all (4)**.
+1. Click **Run** on the top menu to manually start the pipeline.
+
+   ![09](./Images/L2T1S15-1709.png)
+
+1. When prompted, click on **Save and run** to start the pipeline.
+
+   ![09](./Images/fab-ric-ex1-g15.png)
+
+   > 📌**Note:** If you get an error `Copy job connection is required`, then perform the below-mentioned steps; otherwise, you can skip the below steps and proceed with **Step 25**.
+   >
+   > ![09](./Images/L2T1S16-error-2506.png)
+
+1. To set the connection, close the error pane. Then, with the **Copy job (1)** activity selected on the canvas, open the **Settings (2)** tab in the pane below the canvas. Select the **Connection** dropdown **(3)** and then select **Browse all (4)**.
 
    ![Screenshot of the Copy job Settings tab with the Connection dropdown and Browse all highlighted](./Images/manualcon.png)
-
-   > 📌**Note:** If you select **Run** before setting the connection, the **Pipeline validation output** pane shows the error `Copy job Connection is required`. Close the pane and complete this step.
     
 1. On the **Get data** page, under **New sources**, select **Copy job**.
 
