@@ -73,7 +73,7 @@ We've prepared a seamless environment for you to explore and learn about Microso
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](./Images/guide-2506.png)
+![](./Images/g1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -83,7 +83,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](./Images/env.png)
+![Explore Lab Resources](./Images/env1.png)
  
 ## Utilizing the Split Window Feature
  
@@ -107,7 +107,7 @@ To adjust the zoom level of the lab guide, select the **A↕ (1)** icon and choo
 
 Use the **slider (three vertical dots)** located between the **Virtual Machine** and the **Lab Guide** panes to adjust the display size, allowing you to customize the layout based on your preference.
 
-![](./Images/vmsize-2506.png)
+![](./Images/vmre.png)
 
 ## 📞 Support Contact
  

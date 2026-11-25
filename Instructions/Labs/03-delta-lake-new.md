@@ -83,9 +83,9 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
     > 📌**Note:** If a **FABRIC CAPACITY SETTINGS** tip appears next to the capacity field, select **Got it** to close it.
 
-        ![](./Images/L1T1S13.1-2302.png)
+    ![](./Images/L1T1S13.1-2302.png)
 
-        ![](./Images/L1T1S7b-2506.png)
+    ![](./Images/L1T1S7b-2506.png)
 
 1. If the **Introducing task flows (preview)** popup appears, select **Got it** to continue.
 
