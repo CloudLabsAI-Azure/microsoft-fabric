@@ -43,7 +43,7 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
 1. Enter the following details to sign in:
 
-   * Enter the **Email: <inject key="AzureAdUserEmail"></inject> (1)** and then select **Submit (2)** to continue.
+   * On the **Microsoft Fabric** sign-in page, enter the **Email: <inject key="AzureAdUserEmail"></inject> (1)** in the email box and then select **Submit (2)** to continue.
 
       ![](./Images/fab-ms-ex1-g1.png)
 
@@ -51,47 +51,55 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
       ![](./Images/t1temppass.png)
 
-1. Select **No** for the Stay signed-in pop-up.
+1. If the **Stay signed in?** pop-up appears, select **No**.
 
-    ![](./Images/staysignin.png)   
+    ![Screenshot of the Stay signed in prompt with the No button highlighted](./Images/staysignin.png)   
 
-1. You will be now landed to the Microsoft Fabric home page.
+1. If the **Microsoft Fabric (Free) license assigned** pop-up appears in the top-right corner of the home page, select **OK** to close it.
 
-    ![](./Images/fabrichome.png) 
+    ![Screenshot of the Microsoft Fabric free license assigned pop-up with the OK button highlighted](./Images/fab-license-popup.png)
 
-1. Select **Cancel** on the **Welcome to the Fabric view** popup.
+    > 📌**Note:** This pop-up appears only the first time the lab account signs in to Fabric.
+
+1. You are now on the Microsoft Fabric **Home** page. The left navigation pane shows **Home**, **Workspaces**, **Power BI Copilot**, **OneLake catalog**, **Databases** and **Monitor**.
+
+    ![Screenshot of the Microsoft Fabric home page with Workspaces highlighted in the left navigation pane](./Images/fabrichome.png) 
+
+1. If the **Welcome to the Fabric view** pop-up appears, select **Cancel**.
 
     ![](./Images/starttour.png)
 
-1. In the menu bar on the left, select **Workspaces (1)** (the icon looks similar to &#128455;). Select **+ New Workspace (2)**.
+1. In the left navigation pane, select **Workspaces (1)** (the second icon from the top, below **Home**). In the **Workspaces** pane that opens, select **+ New workspace (2)** at the bottom.
 
    ![](./Images/L1T1S6c-2506.png)
 
-1. In the Create a workspace window, which opens on the right side, enter the following details:
+1. In the **Create a workspace** pane, which opens on the right side, enter the following details:
 
     - Name: **dp_fabric-<inject key="DeploymentID" enableCopy="false" /> (1)** 
-    - Scroll down and expand the **Advanced (2)** section
-    - Select **License mode** as **Fabric (2)**
-    - Select the default capacity **(4)**
-    - Click **Apply (5)**.
+    - Scroll down to the **Advanced (2)** section. It is expanded by default; if it is collapsed, select it to expand it.
+    - Under **Workspace type**, select **Fabric (3)**.
+    - Under **Capacity**, keep the default capacity selected **(4)**.
+    - Select **Apply (5)** at the bottom of the pane.
 
-        ![](./Images/L1T1S13.1-2302.png)
+    > 📌**Note:** If a **FABRIC CAPACITY SETTINGS** tip appears next to the capacity field, select **Got it** to close it.
 
-        ![](./Images/L1T1S7b-2506.png)
+    ![](./Images/L1T1S13.1-2302.png)
+
+    ![](./Images/L1T1S7b-2506.png)
 
 1. If the **Introducing task flows (preview)** popup appears, select **Got it** to continue.
 
     ![](./Images/fab-ms-ex1-g10.png)
    
-1. When your new workspace opens, it should be empty, as shown here:
+1. When your new workspace opens, it is empty and shows the **Choose from predesigned task flows or add a task to build one** panel, as shown here:
 
-    ![](./Images/L1T1S9-2506.png)
+    ![Screenshot of the new empty workspace with the task flow panel](./Images/L1T1S9-2506.png)
 
-1. In the workspace, click on **Manage access** from the top right corner. 
+1. In the workspace, select **Manage access** in the toolbar at the top-right corner of the page. 
 
     ![](./Images/L1T1S10-1709.png)
 
-1. In the **Manage access** pane, click on **+ Add people and groups**.
+1. In the **Manage access** pane, select **+ Add people or groups**.
 
     ![](./Images/L1T1S11-2506.png)
 
@@ -115,7 +123,9 @@ In this task, you will create a new workspace in Microsoft Fabric to use in this
 
 In this task, you will create a new lakehouse in your workspace and upload a CSV file to it.
 
-1. In the newly created workspace, click the **+ New Item (1)** button in the top-left corner of your workspace and search for **Lakehouse (2)** and select **Lakehouse (3)**.
+1. In the newly created workspace, select **+ New item (1)** in the top-left corner, below the workspace name. In the **New item** pane, type **Lakehouse (2)** in the **Filter by keyword** box at the top-right, and then select the **Lakehouse (3)** card.
+
+   > 📌**Note:** The filter also returns a **Mirrored Google Lakehouse runtime catalog** card. Make sure you select the card named exactly **Lakehouse**.
 
    >📌 This step creates a centralized storage layer within Microsoft Fabric, where you can store, manage, and analyze data using Delta tables for the upcoming tasks.
 
@@ -125,7 +135,7 @@ In this task, you will create a new lakehouse in your workspace and upload a CSV
 
     - Name: **fabric_lakehouse (1)**
     - Location: Select your workspace. **(2)**
-    - Lakehouse Scheme: Uncheck the box. **(3)**
+    - Lakehouse schemas: Clear the checkbox. **(3)**
     - Click **Create (4)** to create the lakehouse.
 
         ![](./Images/L1T2S2-2302.png)
@@ -137,6 +147,7 @@ In this task, you will create a new lakehouse in your workspace and upload a CSV
     - The **Tables** folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source *Delta Lake* file format, commonly used in Apache Spark.
     - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts* in this folder to reference data that is stored externally.
     - Currently, there are no tables or files in the lakehouse.
+    - The **Context** and **SystemContext** folders below **Files** are created by Fabric automatically. You do not use them in this lab.
 
        ![](./Images/L1T2S4-2506.png)
 
@@ -199,7 +210,7 @@ In this task, you'll use a Fabric notebook to load and view the data you uploade
 
     **Note:** After a few seconds, a new notebook containing a single *cell* will open. Notebooks are made up of one or more cells that can contain *code* or *markdown* (formatted text).
 
-1. If the AI tools introduction screen appears, select **Skip tour** to continue.
+1. If the **Notebook Copilot Updates and Git Integration Supporting Resources** pop-up appears, select **Skip for now** in its bottom-left corner to continue.
 
     ![](./Images/fab-ms-ex1-g19.png)
 
@@ -213,7 +224,7 @@ In this task, you'll use a Fabric notebook to load and view the data you uploade
 
     >📌**Note:** If you are not able to find **Lakehouse explorer**, under the **Explorer** pane, expand Items and expand the lakehouse, you will now see the lakehouse explorer.
 
-1. In the **ellipsis (...)** menu for **products.csv (1)**, select **Load data (2)** > **Spark (3)**. This action automatically generates a Spark code cell in the notebook, allowing you to quickly load and explore the data as a DataFrame in Microsoft Fabric without writing code from scratch. 
+1. In the file list, hover over **products.csv (1)** and select the **ellipsis (...)** that appears to the right of the file name. In the menu, select **Load data (2)** > **Spark (3)**. This action automatically generates a Spark code cell in the notebook, allowing you to quickly load and explore the data as a DataFrame in Microsoft Fabric without writing code from scratch. 
 
     ![](./Images/loaddata.png)
 
@@ -247,11 +258,11 @@ In this task, you will create delta tables based on the data in the dataframe, b
 
 *Managed* tables are tables for which both the schema metadata and the data files are managed by Fabric. The data files for the table are created in the **Tables** folder.
 
-1. Under the results returned by the first code cell, use the **+ Code** button to add a new code cell
+1. Scroll below the output of the first code cell and select **+ Add cell** to add a new code cell.
 
-   ![](./Images/E1T4S1.png)
+   ![Screenshot of the notebook with the Add cell button highlighted below the first cell output](./Images/E1T4S1.png)
 
-    > 📌**Note:** If the **+ Code** button isn’t visible, hover your mouse in the empty notebook area; the option will appear.
+    > 📌**Note:** The **+ Add cell** and **+ Add markdown** buttons appear only when you hover the mouse just below a cell.
 
 1. Enter the following code in the new cell and select **Run** to execute it. This code writes the DataFrame to a managed Delta table named **managed_products**, storing it in the Lakehouse within Microsoft Fabric for scalable and reliable data processing.
 
@@ -273,11 +284,11 @@ In this task, you will create delta tables based on the data in the dataframe, b
 
 You can also create *external* tables for which the schema metadata is defined in the metastore for the lakehouse, but the data files are stored in an external location.
 
-1. Select **+ Code** to add a new code cell.
+1. Hover below the last cell and select **+ Add cell** to add a new code cell.
 
    ![](./Images/E1T4-1S1.png)
 
-   > 📌**Note:** If the **+ Code** button doesn’t appear, move your mouse around the empty notebook area; it will show up when you hover.
+   > 📌**Note:** If **+ Add cell** doesn't appear, move your mouse just below the last cell; it shows up when you hover.
 
 1. And add the following code to it, but **do not run it** now. This code writes the DataFrame as a Delta table named **external_products** at the specified ABFS (Azure Blob File System) path, creating an external table in Microsoft Fabric.
 
@@ -287,7 +298,7 @@ You can also create *external* tables for which the schema metadata is defined i
 
     **Note:** We will be replacing the **abfs_path** placeholder with our ABFS.
 
-1. In the **Lakehouse explorer** pane, in the **ellipsis (...) (1)** menu for the **Files** folder, select **Copy ABFS path (2)**.
+1. In the **Explorer** pane on the left, hover over the **Files** folder, select the **ellipsis (...) (1)** that appears to its right, and then select **Copy ABFS path (2)**.
 
     ![](./Images/cpabfs.png)
 
@@ -554,6 +565,8 @@ Delta Lake supports streaming data. Delta tables can be a *sink* or a *source* f
     ```
 
     ![](./Images/E1T6S6.png)
+
+    > ⚠️**Important:** Keep this notebook's Spark session from blocking the next lab. The lab capacity can run only a limited number of Spark sessions at a time, so Lab 02 will fail with a **TooManyRequestsForCapacity** error if this session is still running. You stop it at the start of Lab 02, Task 2.
 
 ## 🧾 Summary
 

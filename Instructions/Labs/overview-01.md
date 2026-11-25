@@ -2,11 +2,11 @@
 
 ### Overall Estimated Duration: 4 Hours
 
-## 📘 Workshop Scenario
+## 📘 Lab Scenario
 
 You are part of the data engineering team at Contoso Retail Analytics, responsible for enabling data-driven insights across the organization. Contoso collects large volumes of data from multiple sources, such as point-of-sale systems, e-commerce platforms, and inventory systems, stored in formats like CSV files and structured exports. However, data ingestion is manual, transformations are inconsistent, and there is no centralized platform for scalable data management.
 
-To overcome these challenges, Contoso is implementing a unified data platform using **Microsoft Fabric**. The goal is to centralize data storage using a Lakehouse architecture and automate data ingestion and transformation using Data Factory Pipelines, ensuring data is consistently processed and readily available for analysis.
+To overcome these challenges, Contoso is implementing a unified data platform using **Microsoft Fabric**. The goal is to centralize data storage using a lakehouse architecture and automate data ingestion and transformation using Data Factory pipelines, ensuring data is consistently processed and readily available for analysis.
 
 As part of this initiative, you will: 
 
@@ -22,7 +22,7 @@ As part of this initiative, you will:
 
 This lab provides hands-on experience in working with **Microsoft Fabric** Lakehouses and Data Factory Pipelines to store, manage, and process data within a unified analytics platform. You will learn how to organize and manage structured data using Delta Lake tables in a Lakehouse environment and perform data processing using Apache Spark through notebooks.
 
-Throughout the lab, you will build automated data ingestion workflows using Fabric Data Factory Pipelines to extract, transform, and load (ETL) data from various sources into the Lakehouse. Using the graphical pipeline canvas, you will create and manage data workflows with minimal coding effort.
+Throughout the lab, you will build automated data ingestion workflows using Data Factory pipelines in Microsoft Fabric to extract, transform, and load (ETL) data from various sources into the lakehouse. Using the graphical pipeline canvas, you will create and manage data workflows with minimal coding effort.
 
 By integrating data storage, processing, and orchestration capabilities, this lab helps you understand how Microsoft Fabric supports scalable data management and enables you to build efficient end-to-end data engineering solutions for analytics and reporting.
 
@@ -43,11 +43,11 @@ Participants should have:
 - **Understanding of Apache Spark:** Basic knowledge of Spark architecture, DataFrames, and Spark SQL for distributed data processing.
 - **Familiarity with Data Pipelines:** Understanding of ETL processes and experience in building and managing data pipelines.
 - **Microsoft Fabric Capacity:** Access to an active Microsoft Fabric capacity to create and run Fabric resources.
-- **Microsoft Fabric License:** A valid Microsoft Fabric license or an active Fabric Trial license enabled for the user account.
+- **Microsoft Fabric License:** A Microsoft Fabric license for the user account. In this lab environment, a **Microsoft Fabric (Free)** license is assigned to the lab account when it first signs in.
 
 ## 🏗️ Architecture
 
-The architecture of a Microsoft Fabric lab integrates Data Lake storage with Delta tables for reliable data storage, while Data Factory Pipelines automate ETL processes. Apache Spark powers distributed data processing on Delta tables, and notebooks enable interactive analytics. The environment supports data consistency, scalability, and integration with cloud services, ensuring secure and efficient data management and processing.
+The lab architecture combines OneLake storage and Delta tables for reliable data storage, while Data Factory pipelines automate ETL processes. Apache Spark powers distributed data processing on Delta tables, and notebooks enable interactive analytics. The environment supports data consistency, scalability, and integration with cloud services, ensuring secure and efficient data management and processing.
 
 ## 🧩 Architecture Diagram
 
@@ -58,22 +58,22 @@ The architecture of a Microsoft Fabric lab integrates Data Lake storage with Del
 The architecture for this lab involves the following key components:
 
 - **Workspaces:** Collaborative environments in Microsoft Fabric where users can organize and manage data, notebooks, and pipelines for seamless data analysis and processing.
-- **Delta Lake:** A storage layer that enables ACID transactions, versioning, and scalable data management on top of Data Lake for reliable data processing.
+- **Delta Lake:** A storage layer that enables ACID transactions, versioning, and scalable data management on top of OneLake for reliable data processing.
 - **Tables:** Structured data containers in Delta Lake that store processed data and support querying and analytics with features like schema enforcement and time travel.
 - **Notebooks:** Interactive environments where users write and execute code (e.g., Python, Scala) to analyze data, build models, and visualize results.
 - **Pipelines:** Automated workflows that orchestrate the extraction, transformation, and loading (ETL) of data across various sources and destinations within the Fabric ecosystem.
 - **Apache Spark:** A distributed processing engine that enables scalable data analytics and transformation on large datasets within the Microsoft Fabric platform.
-- **Data Lake:** A centralized storage system that stores large volumes of raw, unstructured, and structured data for further processing and analysis.
+- **OneLake:** The single, built-in data lake for Microsoft Fabric that stores large volumes of raw, unstructured, and structured data for further processing and analysis. Lakehouses store their files and tables in OneLake.
 
 ## 🚀 Getting Started with the Lab
 
-We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+We've prepared a seamless environment for you to explore and learn about Microsoft Fabric. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-![](./Images/guide-2506.png)
+![](./Images/g1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -83,17 +83,17 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](./Images/env.png)
+![Explore Lab Resources](./Images/env1.png)
  
 ## Utilizing the Split Window Feature
  
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button in the top-right corner.
  
 ![Use the Split Window Feature](./Images/split-2506.png)
  
 ## Managing Your Virtual Machine
  
-You can **Start, Stop, Restart (2)** your virtual machine from the **Resources (1)** tab.
+You can **Start, Stop, or Restart (2)** your virtual machine from the **Resources (1)** tab.
 
 ![Manage Your Virtual Machine](./Images/gt-004.png)
 
@@ -107,7 +107,7 @@ To adjust the zoom level of the lab guide, select the **A↕ (1)** icon and choo
 
 Use the **slider (three vertical dots)** located between the **Virtual Machine** and the **Lab Guide** panes to adjust the display size, allowing you to customize the layout based on your preference.
 
-![](./Images/vmsize-2506.png)
+![](./Images/vmre.png)
 
 ## 📞 Support Contact
  
