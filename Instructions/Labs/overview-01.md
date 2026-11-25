@@ -2,7 +2,7 @@
 
 ### Overall Estimated Duration: 4 Hours
 
-## 📘 Workshop Scenario
+## 📘 Lab Scenario
 
 You are part of the data engineering team at Contoso Retail Analytics, responsible for enabling data-driven insights across the organization. Contoso collects large volumes of data from multiple sources, such as point-of-sale systems, e-commerce platforms, and inventory systems, stored in formats like CSV files and structured exports. However, data ingestion is manual, transformations are inconsistent, and there is no centralized platform for scalable data management.
 
